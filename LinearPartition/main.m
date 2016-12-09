@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-NSArray *linearPartition(NSArray<NSNumber *> *seq, NSInteger k);
+NSArray<NSNumber *> *linearPartition(NSArray<NSNumber *> *seq, NSInteger k);
 NSArray<NSArray<NSNumber *> *> *buildPartitionTable(NSArray<NSNumber *> *seq, NSInteger k);
 
 int main(int argc, const char * argv[]) {
@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-NSArray *linearPartition(NSArray<NSNumber *> *seq, NSInteger k) {
+NSArray<NSNumber *> *linearPartition(NSArray<NSNumber *> *seq, NSInteger k) {
 
     NSMutableArray *result = [NSMutableArray array];
 
