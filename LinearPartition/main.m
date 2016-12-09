@@ -8,25 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-NSArray<NSNumber *> *linearPartition(NSArray<NSNumber *> *seq, NSInteger k);
+NSArray<NSArray<NSNumber *> *> *linearPartition(NSArray<NSNumber *> *seq, NSInteger k);
 NSArray<NSArray<NSNumber *> *> *buildPartitionTable(NSArray<NSNumber *> *seq, NSInteger k);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
-        NSArray *input = @[@100, @200, @300, @400, @500, @600, @700, @800, @900];
-
+        NSArray *input = @[@9,@2,@6,@3,@8,@5,@8,@1,@7,@3,@4];
         NSArray *linear = linearPartition(input, 3);
-
+        NSLog(@"Input: %@", input);
         NSLog(@"Result: %@", linear);
-
     }
     return 0;
 }
 
-NSArray<NSNumber *> *linearPartition(NSArray<NSNumber *> *seq, NSInteger k) {
+NSArray<NSArray<NSNumber *> *> *linearPartition(NSArray<NSNumber *> *seq, NSInteger k) {
 
-    NSMutableArray *result = [NSMutableArray array];
+    NSMutableArray<NSMutableArray<NSNumber *> *> *result = [NSMutableArray array];
 
     if (k <= 0) {
         NSMutableArray<NSNumber *> *partition = [NSMutableArray array];
